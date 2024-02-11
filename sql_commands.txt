@@ -34,4 +34,48 @@ event = Event(
 db.session.add(event)
 db.session.commit()
 
---
+--------------- create 5 guests
+luffy = Guest(
+  name="Luffy",
+  email="luffy@gmail.com",
+  phone="1111111111"
+)
+db.session.add(luffy)
+
+zoro = Guest(
+  name="Zoro",
+  email="zoro@gmail.com",
+  phone="2222222222"
+)
+db.session.add(zoro)
+
+nami = Guest(
+  name="Nami",
+  email="nami@gmail.com",
+  phone="3333333333"
+)
+db.session.add(nami)
+
+usopp = Guest(
+  name="Usopp",
+  email="usopp@gmail.com",
+  phone="4444444444"
+)
+db.session.add(usopp)
+
+sanji = Guest(
+  name="Sanji",
+  email="sanji@gmail.com",
+  phone="5555555555"
+)
+db.session.add(sanji)
+
+db.session.commit()
+
+--------------- add event via form
+Brunch with Einstein
+
+Enjoy pancakes and blackholes with a holographic rendering of the great physicist Albert Einstein.
+
+3/12/2024
+10:00 AM
