@@ -79,3 +79,22 @@ Enjoy pancakes and blackholes with a holographic rendering of the great physicis
 
 3/12/2024
 10:00 AM
+
+--------------- have guests attend some events
+luffy = User.query.get(1)
+zoro = User.query.get(2)
+nami = User.query.get(3)
+usopp = User.query.get(4)
+sanji = User.query.get(5)
+
+picnic = Event.query.get(2)
+meditation = Event.query.get(3)
+brunch = Event.query.get(4)
+
+luffy.events.extend([picnic, brunch])
+zoro.events.extend([picnic, meditation])
+nami.events.extend([picnic, brunch])
+usopp.events.extend([picnic, brunch])
+sanji.events.extend([picnic, meditation, brunch])
+
+db.session.commit()

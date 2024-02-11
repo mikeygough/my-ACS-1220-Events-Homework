@@ -4,11 +4,6 @@
 
 <a href="/create">+ New Event</a>
 
-<!-- 
-    TODO: Use the event objects to display the correct information (and take 
-    out the hardcoded values)
--->
-
 {% for event in events %}
 <div class="event-container">
   <h3><a href="/event/{{ event.id }}">{{ event.title }}</a></h3>
@@ -17,18 +12,8 @@
     event.date_and_time.strftime('%A %B %-d, %Y at %-I:%M %p') }}
   </p>
   <p><strong>Description:</strong> {{ event.description }}</p>
-  <p class="small-text">THIS PART STILL NEEDS TO BE FILLED OUT!</p>
+  <p class="small-text"> {{ event.guests|length }}</p>
 </div>
 {% endfor %}
-
-<div class="event-container">
-  <h3><a href="/event/2">Picnic at the Park</a></h3>
-  <p><strong>Date:</strong> Saturday June 12, 2021 at 2:00 PM</p>
-  <p>
-    <strong>Description:</strong> Bring a picnic blanket and meet new
-    people!
-  </p>
-  <p class="small-text">10 attending</p>
-</div>
 
 {% endblock %}
