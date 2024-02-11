@@ -1,0 +1,37 @@
+from events_app.models import *
+from datetime import datetime
+
+--------------- add first event
+event = Event(
+    title="Zoom Party!",
+    description="Come join us for some fun zoom games!",
+    date_and_time=datetime(2021, 3, 5, 17, 0),
+    event_type=EventType.PARTY
+)
+
+db.session.add(event)
+db.session.commit()
+
+--------------- add second event
+event = Event(
+    title="Picnic at the Park",
+    description="Come join us for some fun zoom games!",
+    date_and_time=datetime(2021, 6, 12, 14, 0),
+    event_type=EventType.PARTY
+)
+
+db.session.add(event)
+db.session.commit()
+
+--------------- add third event
+event = Event(
+    title="Meditation Deathmatch",
+    description="Welcome to the season kick-off of Meditation Deathmatch!",
+    date_and_time=datetime(2025, 1, 1, 21, 0),
+    event_type=EventType.ALL
+)
+
+db.session.add(event)
+db.session.commit()
+
+--
